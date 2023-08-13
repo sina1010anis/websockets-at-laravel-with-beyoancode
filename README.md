@@ -55,3 +55,28 @@ Echo.channel(`The name of the channel that is in the event file (new Channel('or
 #Now, if the desired event is called anywhere, it will be executed wherever listen is used, and the broadcastWith function inside the event will be executed.
 
 ```
+
+If it gives the following error, we delete the following value from the <b>package.json</b> file.<br>
+```bash
+<p>
+[webpack-cli] Error [ERR_REQUIRE_ESM]: require() of ES Module C:\xampp\htdocs\project\chat_app\webpack.mix.js from C:\xampp\htdocs\project\chat_app\node_modules\laravel-mix\setup\webpack.config.js not supported.
+webpack.mix.js is treated as an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which declares all .js files in that package scope as ES modules.
+Instead rename webpack.mix.js to end in .cjs, change the requiring code to use dynamic import() which is available in all CommonJS modules, or change "type": "module" to "type": "commonjs" in C:\xampp\htdocs\project\chat_app\package.json to treat all .js files as CommonJS (using .mjs for all ES modules instead).
+
+    at module.exports (C:\xampp\htdocs\project\chat_app\node_modules\laravel-mix\setup\webpack.config.js:11:5)
+    at loadConfigByPath (C:\xampp\htdocs\project\chat_app\node_modules\webpack-cli\lib\webpack-cli.js:1439:37)
+    at async Promise.all (index 0)
+    at async WebpackCLI.loadConfig (C:\xampp\htdocs\project\chat_app\node_modules\webpack-cli\lib\webpack-cli.js:1454:35)
+    at async WebpackCLI.createCompiler (C:\xampp\htdocs\project\chat_app\node_modules\webpack-cli\lib\webpack-cli.js:1785:22)
+    at async WebpackCLI.runWebpack (C:\xampp\htdocs\project\chat_app\node_modules\webpack-cli\lib\webpack-cli.js:1890:20)
+    at async Command.<anonymous> (C:\xampp\htdocs\project\chat_app\node_modules\webpack-cli\lib\webpack-cli.js:912:21)
+    at async Promise.all (index 1)
+    at async Command.<anonymous> (C:\xampp\htdocs\project\chat_app\node_modules\webpack-cli\lib\webpack-cli.js:1372:13) {
+  code: 'ERR_REQUIRE_ESM'
+}
+</p>
+```
+```bash
+-     "type": "module",
+
+```
