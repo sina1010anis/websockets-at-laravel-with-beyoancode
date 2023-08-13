@@ -7,6 +7,9 @@ php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsSe
 php artisan migrate
 php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
 
+composer require laravel/ui
+php artisan ui bootstrap --auth
+
 npm i laravel-echo
 npm i pusher-js
 npm i vue@next
